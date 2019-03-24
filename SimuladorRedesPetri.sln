@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimuladorRedesPetri", "SimuladorRedesPetri\SimuladorRedesPetri.csproj", "{D6AB0D83-CC0F-4B8C-A67E-45BB659674CE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D6AB0D83-CC0F-4B8C-A67E-45BB659674CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6AB0D83-CC0F-4B8C-A67E-45BB659674CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6AB0D83-CC0F-4B8C-A67E-45BB659674CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6AB0D83-CC0F-4B8C-A67E-45BB659674CE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
