@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace redePetri.rededepetri
 {
     public class Arco
@@ -10,5 +11,13 @@ namespace redePetri.rededepetri
         public Arco()
         {
         }
+
+        public Arco(Lugar lugar, Transicao transicao)
+        {
+            this.lugar = lugar;
+            this.transicao = transicao;
+        }
+
+
     }
 }
