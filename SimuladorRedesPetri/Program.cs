@@ -18,9 +18,9 @@ namespace SimuladorRedesPetri
             for (int i = 1; i <= qtdLugar; i++)
             {
                 Console.Write($"Quantas marcas em L{i}? ");
-                int marcas = int.Parse(Console.ReadLine());
+                int qtdMarcas = int.Parse(Console.ReadLine());
 
-                lugares.Add(new Lugar($"L{i}", marcas));
+                lugares.Add(new Lugar($"L{i}", qtdMarcas));
             }
 
             Console.Write("Quantas transicões: ");

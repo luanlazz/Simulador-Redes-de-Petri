@@ -19,5 +19,17 @@ namespace redePetri.rededepetri
             this.status = false;
             this.arcos = new List<Arco>();
         }
+
+        public bool podeExecutar()
+        {
+            foreach (Arco arco in arcos)
+            {
+                if (arco.lugar.qtdMarcas < arco.peso)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
     }
 }
