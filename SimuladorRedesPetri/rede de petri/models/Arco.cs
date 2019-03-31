@@ -18,6 +18,5 @@ namespace redePetri.rededepetri
             this.transicao = transicao;
         }
 
-
     }
 }

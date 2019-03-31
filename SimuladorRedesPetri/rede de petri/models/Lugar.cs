@@ -7,6 +7,7 @@ namespace redePetri.rededepetri
     {
         public string nome { get; set; }
         public int qtdMarcas { get; set; }
+        public Arco arco { get; set; }
 
         public Lugar()
         {
@@ -18,18 +19,18 @@ namespace redePetri.rededepetri
             this.qtdMarcas = qtdMarcas;
         }
 
-        public void retiraMarca(int marcas)
+        public void RetiraMarca()
         {
-            if (marcas > this.qtdMarcas)
+            if (arco.peso > qtdMarcas)
             {
                 throw new RedePetriException("Quantidade de marcas indisponivel");
             }
-            this.qtdMarcas -= marcas;
+            qtdMarcas -= arco.peso;
         }
 
-        public void adicionaMarca(int marcas)
+        public void AdicionaMarca()
         {
-            this.qtdMarcas += marcas;
+            qtdMarcas += arco.peso;
         }
     }
 }
