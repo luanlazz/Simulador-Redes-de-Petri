@@ -8,9 +8,6 @@ namespace SimuladorRedesPetri.rededepetri
     {
         public static void imprimirSimulacao(SimuladorRedePetri simulador)
         {
-            Console.WriteLine();
-            Console.WriteLine("- Simulacao da Rede de Petri -");
-
             imprimirCabecalho(simulador);
             imprimirCiclo(simulador);
         }
@@ -41,7 +38,7 @@ namespace SimuladorRedesPetri.rededepetri
 
             foreach (Transicao transicao in simulador.transicoes)
             {
-                if (transicao.status)
+                if (transicao.podeExecutar)
                 {
                     Console.Write("S " + " | ");
                 }
@@ -50,6 +47,11 @@ namespace SimuladorRedesPetri.rededepetri
                     Console.Write("N " + " | ");
                 }
             }
+        }
+
+        public static void ImprimeSimulacaoFinalizada()
+        {
+            Console.WriteLine("Simulacao finalizada...");
         }
 
     }

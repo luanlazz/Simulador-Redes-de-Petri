@@ -6,8 +6,8 @@ namespace redePetri.rededepetri
     public class Transicao
     {
         public string nome { get; set; }
-        public bool status { get; set; }
-        public List<Arco> arcos { get; set; }
+        public bool podeExecutar { get; set; }
+        public List<Arco> arcos { get; set; } = new List<Arco>();
         public List<Lugar> lugaresEntrada { get; set; } = new List<Lugar>();
         public List<Lugar> lugaresSaida { get; set; } = new List<Lugar>();
 
@@ -15,26 +15,27 @@ namespace redePetri.rededepetri
 
         public Transicao()
         {
+            podeExecutar = false;
         }
 
-        public Transicao(string nome)
+        public Transicao(string nome) : this()
         {
             this.nome = nome;
-            status = false;
-            arcos = new List<Arco>();
         }
 
-        public bool PodeExecutar()
+        public void PodeExecutar()
         {
             foreach (Lugar lugar in lugaresEntrada)
             {
                 if (lugar.qtdMarcas < lugar.arco.peso)
                 {
-                    return false;
+                    podeExecutar = false;
+                }
+                else
+                {
+                    podeExecutar = true;
                 }
             }
-            status = true;
-            return true;
         }
     }
 }

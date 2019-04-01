@@ -17,6 +17,5 @@ namespace redePetri.rededepetri
             this.lugar = lugar;
             this.transicao = transicao;
         }
-
     }
 }
